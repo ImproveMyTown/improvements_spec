@@ -1,0 +1,24 @@
+{
+  "name": "improvements_spec",
+  "version": "1.0.0",
+  "description": "Improvements module specifications",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ImproveMyTown/improvements_spec.git"
+  },
+  "keywords": [
+    "cucumber",
+    "bdd",
+    "spec"
+  ],
+  "author": "alayor",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ImproveMyTown/improvements_spec/issues"
+  },
+  "homepage": "https://github.com/ImproveMyTown/improvements_spec#readme"
+}
