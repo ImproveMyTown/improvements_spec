@@ -4,7 +4,8 @@
   "description": "Improvements module specifications",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node ./node_modules/.bin/cucumber-js",
+    "test": "node ./node_modules/.bin/cucumber-js"
   },
   "repository": {
     "type": "git",
@@ -20,5 +21,9 @@
   "bugs": {
     "url": "https://github.com/ImproveMyTown/improvements_spec/issues"
   },
-  "homepage": "https://github.com/ImproveMyTown/improvements_spec#readme"
+  "homepage": "https://github.com/ImproveMyTown/improvements_spec#readme",
+  "dependencies": {
+    "cucumber": "^2.0.0-rc.6",
+    "expect.js": "^0.3.1"
+  }
 }
