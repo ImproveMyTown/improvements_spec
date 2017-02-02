@@ -1,5 +1,5 @@
 language: node_js
 node_js:
   - 6.0.0
-env
+env:
   - IMPROVEMENTS_URL=improvements.herokuapp.com
