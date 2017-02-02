@@ -5,14 +5,16 @@ var expect = require('expect.js');
 defineSupportCode(function({Given, When, Then}) {
 
   var request;
+  var port = process.env.PORT || 5000;
+  var host = process.env.IMPROVEMENTS_URL || "localhost";
 
   Given('I want to make requests to site', function() {
 
   });
 
-  Then('I send request to {route}', function (route) {
+  When('I send any request', function () {
     request = function(callback) {
-        http.get({host: route}, callback)
+        http.get({host: host, port: port}, callback)
       }
   });
 
