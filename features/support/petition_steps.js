@@ -33,7 +33,6 @@ defineSupportCode(function({Given, When, Then}) {
                 callback(e);
             });
         });
-        console.log("Request: " + post_data)
      post_req.write(post_data);
      post_req.end();
   });

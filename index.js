@@ -1,6 +1,14 @@
-Feature: Improvements
+require('./runner');
+var express = require('express');
+var app = express();
+app.set('port', (process.env.PORT || 5001));
 
-  Scenario: Checking app availability
-    Given I want to use improvements module
-    When I send "/" request
-    Then I should see "Hello World!"
+app.use(express.static(__dirname + '/public'));
+app.use("/", function(req, res, next) {
+   require('./runner');
+   res.redirect("/results.html");
+})
+
+app.listen(app.get('port'), function(){
+     console.log('Express server listening on port', app.get('port'))
+});
