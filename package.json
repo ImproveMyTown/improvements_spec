@@ -4,8 +4,7 @@
   "description": "Improvements module specifications",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "test": "node ./node_modules/.bin/cucumber-js"
+    "start": "node index.js"
   },
   "repository": {
     "type": "git",
