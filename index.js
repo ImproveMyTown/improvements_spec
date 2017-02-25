@@ -6,7 +6,7 @@ var app = express();
 app.set('port', (process.env.PORT || 5001));
 
 app.use("/", function(req, res, next) {
-    exec('node ./node_modules/.bin/cucumber-js --format=json | tee ' + __dirname +'/public/results.json', function() {
+    exec('node ./node_modules/.bin/cucumber-js --format=json | tee ' + __dirname + '/public/results.json', function() {
        res.sendFile(path.join(__dirname, '/public/results.html'));
     });
 });
