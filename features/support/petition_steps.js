@@ -4,9 +4,9 @@ var expect = require('expect.js');
 
 defineSupportCode(function({Given, When, Then}) {
 
+  var host = process.env.IMPROVEMENTS_URL;
+  var port = process.env.IMPROVEMENTS_PORT;
   var request;
-  var host = process.env.IMPROVEMENTS_URL || "localhost";
-  var port = host === "localhost" ? 5000 : null;
   var result;
 
   Given('I want to create a petition', function() {});

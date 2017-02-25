@@ -3,6 +3,10 @@ var exec = require('child_process').exec;
 var express = require('express');
 var path = require('path');
 var app = express();
+process.env['IMPROVEMENTS_URL'] = 'improvements.herokuapp.com';
+var context = require('./context');
+
+app.use(context);
 app.set('port', (process.env.PORT || 5001));
 
 app.use("/", function(req, res, next) {
