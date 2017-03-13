@@ -38,8 +38,13 @@ defineSupportCode(function({Given, When, Then}) {
   });
 
   Given('I should get a single message', function(callback) {
-    var json = JSON.parse(result);
-    expect(json.messages.length).to.be(1);
+    try {
+      var json = JSON.parse(result);
+      expect(json.messages.length).to.be(1);
+    } catch(ex) {
+      ex.message = ex.message + ". Response: " + result;
+      callback(ex);
+    }
   });
 
   Given('with level: {level}', function(level, callback) {
